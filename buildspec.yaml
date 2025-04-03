@@ -3,6 +3,9 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      - java -version
+      - mvn -version
+      - echo "Starting Maven Build..."
       - mvn clean install
       - echo Logging in to Amazon ECR...
       - aws --version
@@ -35,5 +38,5 @@ phases:
 artifacts:
   files:
     - imagedefinitions.json
-    - target/aim
+    - target/aim.jar
 

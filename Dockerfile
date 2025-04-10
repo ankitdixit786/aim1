@@ -11,7 +11,7 @@ COPY ./target/aim.jar /app
 EXPOSE 8080
 
 # Set environment variables for database connection (optional)
-ENV DB_HOST=database-1.cvqg0iekc8d2.ap-south-1.rds.amazonaws.com
+ENV DB_HOST=jdbc:mysql://aimdb.cvqg0iekc8d2.ap-south-1.rds.amazonaws.com/aim
 ENV DB_PORT=3306
 ENV DB_NAME=aim
 ENV DB_USER=root
